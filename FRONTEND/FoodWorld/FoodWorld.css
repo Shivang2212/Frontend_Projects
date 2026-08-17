@@ -302,15 +302,33 @@ h4 {
     inset: 0 0 0 auto;
 }
 
-.card-list {
+.cart-list {
     flex: 1;
     width: 100%;
     margin-top: 1.5rem;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) rgba(0, 0, 0, 0.05);
 }
 
-.card-list::-webkit-scrollbar{
-    width: 0;
+/* CART SCROLLBAR STYLING */
+.cart-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cart-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.cart-list::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 10px;
+}
+
+.cart-list::-webkit-scrollbar-thumb:hover {
+    background: var(--lead);
 }
 
 .total-container {
